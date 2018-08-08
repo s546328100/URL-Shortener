@@ -18,22 +18,22 @@
       <ul><li>When I visit that shortened URL, it will redirect me to my original link.</ul>
     </blockquote>
     <h3>Example creation usage:</h3>
-    <code><a href="http://kyun.dusuchao.xin:3002/https://www.baidu.com">http://kyun.dusuchao.xin:3002/https://www.baidu.com</a></code>
+    <code><a href="<%= host %>/new/https://www.baidu.com"><%= host %>/new/https://www.baidu.com</a></code>
     <br>
-    <code><a href="http://kyun.dusuchao.xin:3002/http://www.dusuchao.xin">http://kyun.dusuchao.xin:3002/http://www.dusuchao.xin</a></code>
+    <code><a href="<%= host %>/new/http://www.dusuchao.xin"><%= host %>/new/http://www.dusuchao.xin</a></code>
     <br>If you want to pass a site that doesn't exist (or an invalid url) for some reason you can do:<br>
-    <code><a href="http://kyun.dusuchao.xin:3002/invalid?allow=true">http://kyun.dusuchao.xin:3002/invalid?allow=true</a></code>
+    <code><a href="<%= host %>/new/invalid?allow=true"><%= host %>/new/invalid?allow=true</a></code>
     <h3>Example creation output:</h3>
     <code>
       {
-        "original_url": "http://www.dusuchao.xin",
-        "short_url": "https://kyun.dusuchao.xin:3002/4"
+        "original_url": "http://dusuchao.xin",
+        "short_url": "https://<%= host %>/0"
       }
     </code>
     <h3>Usage:</h3>
-    <code><a href="https://kyun.dusuchao.xin:3002/4">https://kyun.dusuchao.xin:3002/4</a></code>
+    <code><a href="<%= host %>/0"><%= host %>/0</a></code>
     <h3>Will redirect to:</h3>
-    <code><a href="http://www.dusuchao.xin">http://www.dusuchao.xin</a></code>
+    <code><a href="http://dusuchao.xin">http://dusuchao.xin</a></code>
   </div>
 </body>
 
