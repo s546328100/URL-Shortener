@@ -10,13 +10,14 @@ const app = new Koa();
 app.use(views(`${__dirname}/views`));
 app.use(router.routes());
 
+router.get('/', async ctx => {
+    return await ctx.render('index');
+});
+
 router.get('/new/*', shortener.addShortUrl);
 
 router.get('/*', shortener.getShortUrl);
 
-router.get('/', async ctx => {
-    return await ctx.render('index');
-});
 
 app.listen(port, () => {
     console.log('listen to port: %s', port);
